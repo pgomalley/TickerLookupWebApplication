@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FinanceAPIWebPage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div id="content">
+            <h1>Ticker Lookup</h1>
+            <div class="input-wrapper">
+                <input type="text" id="ticker-input" placeholder="Input ticker">
+                <button id="fetch-data-button" onclick="fetchData()">Fetch Data</button>
+            </div>
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                Welcome to our Stock Data Fetcher! This web application is designed to provide you with up-to-date financial data on a variety of publicly traded companies. Simply enter the ticker symbol for any company, and you'll receive recent trading data including opening and closing prices, trading volumes, and high and low prices for the trading period. This data is a powerful tool that can help you make informed investment decisions.
+                </p>
+            </section>
+            <section id="data-overview">
+                <h2>Data Overview</h2>
+                <p>
+                The data is displayed in a user-friendly format. For each trading day, you will see the opening and closing prices, the high and low prices, and the volume of trades. In addition, you will see a line chart that visualizes the closing prices over time. We also provide a summarized data overview for the entire fetched dataset. This includes the highest and lowest prices over the time period, the average closing price, and the total trading volume.
+                </p>
+            </section>
+            <section id="data-source">
+                <h2>Data Source</h2>
+                <p>
+                The financial data provided by this tool is sourced from <a href="https://www.alphavantage.co/" target="_blank">Alpha Vantage</a>, a leading provider of free APIs for real-time and historical data on stocks, forex, and cryptocurrencies.
+                </p>
+            </section>
+        </div>
+        <div id="spinner" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        <div class="total-data-container">
+            <h2 class="finance-date" id="total-data-date"></h2>
+            <div class="finance-data" id="total-data-values">
+            </div>
+            <canvas id="total-data-chart"></canvas>
+        </div>  
+        <div id="data-and-charts-container"></div>
+        <button id="back-button"></button>
+    </div>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
