@@ -23,8 +23,8 @@ You can install the Python packages using pip:
 
 ### Running the App
 
-To start the server, run the following command in your terminal:
-
+To start the server, run the Python Script in your enviroment BEFORE attempting
+to open the web application. 
 
 The application can be accessed in a web browser at `http://localhost:5500/`.
 
